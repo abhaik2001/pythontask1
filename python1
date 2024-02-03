@@ -1,0 +1,8 @@
+ADD CATEGORY
+<?php
+include "../../config.php";
+$admin=new Admin();
+$name=$_POST['name'];
+$stmt=$admin->cud("INSERT INTO `category`(`cat_name`) VALUES ('$name')","saved");
+echo "<script>alert('Added Successfully....');window.location='../viewcategory.php';</script>";
+?>
